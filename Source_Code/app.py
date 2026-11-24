@@ -10,7 +10,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.utils import secure_filename
 import os
 
-app=Flask(__name__)
+app = Flask(__name__, template_folder='Templates', static_folder='Static')
 app.secret_key = "student_management_secret"
 
 def hash_password(password):
