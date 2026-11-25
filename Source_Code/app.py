@@ -171,13 +171,13 @@ def add_student():
 
         filename = secure_filename(photo.filename)
 
-       upload_folder = os.path.join(
-           app.root_path, "static", "uploads"
-       )
+        upload_folder = os.path.join(
+            app.root_path, "static", "uploads"
+        )
 
-       os.makedirs(upload_folder, exist_ok=True)
+        os.makedirs(upload_folder, exist_ok=True)
 
-       photo.save(os.path.join(upload_folder, filename))
+        photo.save(os.path.join(upload_folder, filename))
 
         conn = sqlite3.connect(
             "Database/Student_management.db"
